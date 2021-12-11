@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onchange</title>
+    <script type="text/javascript">
+        //静态注册改变内容
+        function onchangeFun(){
+            alert("女神改变了");
+        }
+
+        //动态注册改变内容
+        window.onload = function (){
+            var textObj = document.getElementById("text")
+            textObj.onchange = function (){
+                alert("男神已改变");
+            }
+        }
+    </script>
+</head>
+<body>
+    请选择你心目中的女神:
+    <select onchange="onchangeFun()">
+        <option>--女神--</option>
+        <option>aa</option>
+        <option>bb</option>
+        <option>cc</option>
+    </select>
+    <br/><hr/>
+    请说出你心中的男神：<input type="text" id = "text">
+</body>
+</html>

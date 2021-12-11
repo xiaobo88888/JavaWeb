@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+	window.onload = function(){
+		//这个除了要等待创建好dom对象之后，还需要等待标签的内容加载完成才能执行
+		alert("原生js加载页面完成之后");
+	}
+
+
+	$(function(){
+		//$(document).ready(function(){})
+		//这个是浏览器解析完页面标签之后创建好dom对象之后就会马上执行
+		alert("jQuery加载完成页面之后");
+	});
+
+</script>
+</head>
+<body>
+	<button>我是按钮</button>
+	
+	<iframe src="http://www.baidu.com"></iframe>
+	<img src="http://www.baidu.com/1.jpg"/>
+	
+</body>
+</html>

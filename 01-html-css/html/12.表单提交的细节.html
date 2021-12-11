@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单提交的细节</title>
+</head>
+<body>
+    <!--
+        form 标签是表单标签
+        action 属性设置提交的服务器地址
+        method 属性设置提交的方式 GET(默认) 或者 POST
+    -->
+
+<form action = "http://localhost:8080" method = "get">
+    <h1 align="center">用户注册</h1>
+    <table align="center">
+        <tr>
+            <td>用户名称：</td>
+            <td><input type="text" name = "username" value="刘博"/></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="password" name = "password"></td>
+        </tr>
+        <tr>
+            <td>性别：</td>
+            <td>
+                <input type="radio" name = "sex" checked = "checked" value="boy"/>男
+                <input type="radio" name = "sex" value="girl">女
+            </td>
+        </tr>
+        <tr>
+            <td>兴趣爱好：</td>
+            <td>
+                <input name = "hobby" type = "checkbox" checked = "checked" value="java"/>Java
+                <input name = "hobby" type = "checkbox" value="javascript">JavaScript
+                <input name = "hobby" type = "checkbox" value="python">Python
+            </td>
+        </tr>
+        <tr>
+            <td>国籍：</td>
+            <td>
+                <select name = "country">
+                    <option value="none">---请选择国籍---</option>
+                    <option value="usa">美国</option>
+                    <option selected = "selected" value="cn">中国</option>
+                    <option value="jp">小日本</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>自我评价：</td>
+            <td>
+                <textarea name = "desc" rows="5" cols="20">我才是默认值</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type = "reset" value="清空所写"/>
+                <input type="submit" value="提交所写"/>
+            </td>
+            <td>
+                <input type="button" value="按钮"/>
+                <input type = "file"/>
+                <input type="hidden" name = "aaa" value="隐藏域"/>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

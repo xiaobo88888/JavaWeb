@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onclickFun(){
+            var usernameObj = document.getElementById("username");
+
+            var usernameText = usernameObj.value;
+
+            var patt = /^\w{5,12}$/;
+
+            var spanObj = document.getElementById("spanid");
+
+            if(patt.test(usernameText)){
+                /*因为span标签内可以放一个img标签，所以而span标签里面的内容可以用innerHTML来赋值，所以就可以将
+                * 标签赋值，因为使用的是innerHTML来赋值，所以如果字符串内是个标签，就会识别成为标签*/
+                spanObj.innerHTML = "<img src=\"right.png\" width=\"12\" height=\"12\"/>";
+            }else{
+                spanObj.innerHTML = "<img src =\"wrong.png\" width=\"12\" height=\"12\"/>";
+            }
+        }
+    </script>
+</head>
+<body>
+    用户名：<input type="text" id = "username">
+    <span id = "spanid"></span>
+    <button onclick="onclickFun()">校验</button>
+</body>
+</html>

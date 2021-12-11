@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单的显示</title>
+</head>
+<body>
+    <!--
+        form就是一个表单
+            input type = "text" 是单行文件输入框        value = "默认值" 设置默认显示内容
+            input type = "password" 是密码输入框，不可见      value = "默认值" 设置默认显示内容
+            input type = "radio" 是单选框，name属性可以将其分组，浏览器就可以识别这些单选框是一组的了 checked = "checked"是默认选中
+            input type = "checkbox"是复选框     checked = "checked"是默认选中
+            input type = "reset" 是重置按钮，将缩写的内容清空     value 可以修改按钮上的文本
+            input type = "submit" 是提交按钮     value 可以修改按钮上的文本
+            input type = "submit"是按钮        value 可以修改按钮上的文本
+            input type = "file" 是文件  可以选择文件
+            input type = "hidden" 是隐藏域 当我们要发送某些信息，而这些信息不需要让用户参与的时候可以使用（提交的时候同样会发送给服务器）
+
+            select 标签是下拉列表框
+            option 标签是下拉列表框中的选项 selected = "selected" 设置默认选中
+
+            textarea 标签是文本域标签（起始标签和结束标签中的内容是默认值）
+                rows 设置可以显示几行的高度
+                cols 设置每行可以显示几个字符
+    -->
+    <form>
+        用户名称：<input type="text" value="刘博"/><br/>
+        密码：   <input type="password"/><br/>
+        性别：   <input type="radio" name="sex" checked = "checked"/>男 <input type="radio" name = "sex">女<br/>
+        兴趣爱好：<input type = "checkbox" checked = "checked"/>Java<input type = "checkbox">JavaScript<input type = "checkbox">Python<br/>
+        国籍：   <select>
+                    <option>---请选择国籍---</option>
+                    <option>美国</option>
+                    <option selected = "selected">中国</option>
+                    <option>小日本</option>
+                </select><br/>
+        自我评价：<textarea rows="5" cols="20">我才是默认值</textarea><br/>
+        <input type = "reset" value="清空所写"/>
+        <input type="submit" value="提交所写"/>
+        <input type="button" value="按钮"/>
+        <input type = "file"/><br/>
+        <input type="hidden" name = "aaa" value="隐藏域"/><br/>
+    </form>
+</body>
+</html>

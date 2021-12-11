@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //4.记住得在页面加载完成之后再执行
+        window.onload = function () {
+            //现在使用js代码来创建标签
+            //标签为，<div>刘博好帅</div>
+
+            //1.通过document对象创建一个标签div
+            var divObj = document.createElement("div");
+
+            //因为标签中的文本依然是个对象
+            //所以我们可以先生成一个文本对象
+           var textNodeObj = document.createTextNode("刘博好帅");
+            //然后文本对象是标签的子节点，所以可以添加子节点
+            divObj.appendChild(textNodeObj);
+
+
+            // //2.给标签设置内容
+            // divObj.innerHTML = "刘博好帅";
+
+            //3.因为div标签是body的子节点，所以通过body添加标签
+            document.body.appendChild(divObj);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

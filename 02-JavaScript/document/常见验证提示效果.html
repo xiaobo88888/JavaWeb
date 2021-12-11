@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onclickFun(){
+            var usernameObj = document.getElementById("username");
+
+            //获取用户输入的值
+            var usernameText = usernameObj.value;
+
+            //正则表达式
+            var patt = /^\w{5,12}$/;
+
+            var spanidObj = document.getElementById("spanid");
+
+            //innerHTML表示起始标签到结束标签之间的内容
+            //innerHTML 可读可写
+            if(patt.test(usernameText)){
+                spanidObj.innerHTML = "用户名合法";
+            }else{
+                spanidObj.innerHTML = "用户名不合法";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    用户名：<input type = "text" id = "username">
+    <span id = "spanid" style = "color:red"></span>
+    <button onclick="onclickFun()">校验</button>
+</body>
+</html>

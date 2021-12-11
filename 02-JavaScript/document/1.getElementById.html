@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementById</title>
+    <script type="text/javascript">
+        function onclickFun() {
+            //当我们需要操作一个标签时，首先获取该标签对象
+            var usernameObj = document.getElementById("username");
+
+            //input输入框中的value属性是默认值，如果值修改就是修改后的值，所以可以得到用户输入的文本
+            var usernameText = usernameObj.value;
+
+            //如何验证字符串是否符合某个规则，需要使用正则表达式技术
+            var patt = /^\w{5,12}$/;//不要有空格
+
+            /*
+            * test()方法用于测试某个字符串是不是匹配我的规则
+            * 如果匹配，则返回true，如果不匹配，则返回false
+            * */
+            if(patt.test(usernameText)){
+                alert("用户名合法");
+            }else{
+                alert("用户名不合法");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <!--需求：当用户点击了校验按钮时，要获取输入框中的内容然后验证其是否合法，
+    验证的规则是：必须有数字，字母，下划线组成的5~12位-->
+    用户名：<input type="text" id = "username"/>
+    <button onclick="onclickFun()">校验</button>
+</body>
+</html>

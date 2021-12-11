@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隐形参数</title>
+    <script type="text/javascript">
+
+        var fun = function (a){ //即使这里有一个参数，也不影响传入的实参个数
+
+            // alert(arguments.length);
+
+            // alert(arguments[0]);
+            // alert(arguments[1]);
+            // alert(arguments[2]);
+
+            for (var i = 0; i < arguments.length; i++) {
+                alert(arguments[i]);
+            }
+
+            alert("无参函数");
+        }
+
+        fun(11, "aaaa", true);
+
+
+        //需求：编写一个函数，用于计算所有参数相加的和
+        function sum(num1, num2){
+            var result = 0; //注意这里要赋值，否则result就是undefined，然后又跟数字相加就变成了NaN
+
+            for(var i = 0; i < arguments.length; i++){
+
+                //可以选择判断是否为number类型再相加
+                if(typeof (arguments[i]) == "number") {
+                    result += arguments[i];
+                }
+            }
+
+            return result;
+        }
+
+        alert(sum(1,2,3,4,5,6));    //21
+
+        /*注意这里在没有判断类型之前，首先1 + 2 = 3，然后3和aaa相加就会自动的字符串拼接，
+        然后就变成了字符串，随后拼接3和4，就变成了3aaa34*/
+        alert(sum(1, 2, "aaa", 3, 4));  //3aaa34
+
+        alert(sum(1, 2, "aaa", 3, 4));	//添加了类型判断之后就等于10了
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

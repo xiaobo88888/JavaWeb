@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //onload 事件的方法
+        function f(){
+            alert(alert("静态注册onload事件"))
+        }
+
+        //onload 事件的动态注册，是固定写法
+        window.onload = function (){
+            alert("动态注册的onload事件");
+        }
+    </script>
+</head>
+
+<!--静态注册onload事件
+    onload事件是浏览器解析完页面之后会自动触发的事件
+
+   <body onload="f();">  因为不可能在body上添加太多的属性，所以会在head中添加js代码，然后在body中调用
+   -->
+
+
+<body>
+
+</body>
+</html>

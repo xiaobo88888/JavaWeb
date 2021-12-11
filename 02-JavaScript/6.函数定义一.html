@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数定义一</title>
+    <script type="text/javascript">
+        function fun(){
+            alert("无参函数fun被调用了");
+        }
+
+        fun();
+
+        function fun2(a, b){    //不用加参数类型，因为本身也限定不了类型
+            alert("有参函数被调用了：a=>" + a + "b=>" + b);
+        }
+
+        fun2(11, "aaa");
+
+
+        function sum(num1, num2) {
+            var result;
+            result = num1 + num2;
+            return result;
+
+        }
+        alert(sum(11, 22));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

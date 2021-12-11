@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<books> <!-- 表示多个图书信息 -->
+    <book sn = "SN111111">  <!--表示一个图书信息, sn属性表示图书编号-->
+        <name>aaa</name>    <!--表示书名-->
+        <author>bbb</author>    <!--表示作者-->
+        <price>111</price>  <!--表示价格-->
+    </book>
+
+    <book sn = "SN111112">  <!--表示一个图书信息，sn属性表示图书编号-->
+        <name>aaa</name>    <!--表示书名-->
+        <author>bbb</author>    <!--表示作者-->
+        <![CDATA[这里都是纯文本，不会解析]]>
+        <price>111</price>  <!--表示价格-->
+    </book>
+</books>
